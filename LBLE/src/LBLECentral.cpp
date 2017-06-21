@@ -417,7 +417,7 @@ void LBLECentralClass::onEvent(bt_msg_type_t msg, bt_status_t status, void *buff
     }
 }
 
-uint32_t getRawManufacturerData(int index, uint8_t* dstBuf, uint32_t bufLen)
+uint32_t LBLECentralClass::getRawManufacturerData(int index, uint8_t* dstBuf, uint32_t bufLen)
 {
     LBLEAdvertisements parser(m_peripherals_found[index]);
     
