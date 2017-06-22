@@ -735,7 +735,7 @@ int LBLEClient::discoverCharacteristicsOfService(const LBLEServiceInfo& s)
 
 int LBLEClient::readCharacteristicInt(const LBLEUuid& uuid)
 {
-    LBLEValueBuffer b = readCharacterstic(uuid);
+    LBLEValueBuffer b = readCharacteristic(uuid);
     int ret = 0;
     if(b.size() < sizeof(ret))
     {
@@ -749,7 +749,7 @@ int LBLEClient::readCharacteristicInt(const LBLEUuid& uuid)
 
 String LBLEClient::readCharacteristicString(const LBLEUuid& uuid)
 {
-    LBLEValueBuffer b = readCharacterstic(uuid);
+    LBLEValueBuffer b = readCharacteristic(uuid);
     
     if(b.size())
     {
@@ -768,7 +768,7 @@ String LBLEClient::readCharacteristicString(const LBLEUuid& uuid)
 
 char LBLEClient::readCharacteristicChar(const LBLEUuid& uuid)
 {
-    LBLEValueBuffer b = readCharacterstic(uuid);
+    LBLEValueBuffer b = readCharacteristic(uuid);
     char ret = 0;
     if(b.size() < sizeof(ret))
     {
@@ -782,7 +782,7 @@ char LBLEClient::readCharacteristicChar(const LBLEUuid& uuid)
 
 float LBLEClient::readCharacteristicFloat(const LBLEUuid& uuid)
 {
-    LBLEValueBuffer b = readCharacterstic(uuid);
+    LBLEValueBuffer b = readCharacteristic(uuid);
     float ret = 0;
     if(b.size() < sizeof(ret))
     {
@@ -794,7 +794,7 @@ float LBLEClient::readCharacteristicFloat(const LBLEUuid& uuid)
     return ret;
 }
 
-LBLEValueBuffer LBLEClient::readCharacterstic(const LBLEUuid& serviceUuid)
+LBLEValueBuffer LBLEClient::readCharacteristic(const LBLEUuid& serviceUuid)
 {
     if(!connected())
     {

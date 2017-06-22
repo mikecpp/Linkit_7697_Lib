@@ -214,7 +214,7 @@ public:
 	bool hasService(const LBLEUuid& uuid);
 	
 	// Read a characteristic from the remote device.
-	LBLEValueBuffer readCharacterstic(const LBLEUuid& uuid);
+	LBLEValueBuffer readCharacteristic(const LBLEUuid& uuid);
 	int readCharacteristicInt(const LBLEUuid& uuid);
 	String readCharacteristicString(const LBLEUuid& uuid);
 	char readCharacteristicChar(const LBLEUuid& uuid);
